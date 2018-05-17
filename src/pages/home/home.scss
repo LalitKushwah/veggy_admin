@@ -1,3 +1,23 @@
 page-home {
+  ion-card ion-card-content p{
+    font-size: 30px!important;
+    text-align: center;
+  }
+  ion-card {
+    min-height: 170px;
+    border-top: 5px solid #0477bf!important;
+  }
 
+  ion-card:hover {
+    cursor:pointer;
+    transform : scale(1.01);
+    transition: 0.3s ease-out;
+  }
+  ion-content {
+    background-color: #fbfbfb !important;
+    padding: 10px;
+  }
+  ion-row{
+    padding: 10px;
+  }
 }
