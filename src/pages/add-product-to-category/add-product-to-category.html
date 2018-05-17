@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Product To Category</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="category" interface="popover">
+        <ion-option *ngFor="let singleCategory of categoryList" value="{{singleCategory.categoryId}}">{{singleCategory.categoryName}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Product</ion-label>
+      <ion-select [(ngModel)]="product"  interface="popover">
+        <ion-option *ngFor="let singleProduct of productList" value="{{singleProduct.productId}}">{{singleProduct.productName}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <button ion-button (click)="addProductToCategory(product, category)">Add Product to Category</button>
+
+</ion-content>
